@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     <img class=coffee src="assets/imgCof.jpg" alt="Imagen del titulo">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <section>
+  <a *ngFor="let item of categorias"
+    [ngStyle]="{'background-image':'url('+item.fotoUrl+')'}"
+    [routerLink]="['/categorias',item.nombre]"
+
+    >
+    <div class="first">
+    <ion-icon name="star"></ion-icon>
+  </div>
+
+    <span>{{item.nombre}}</span>
+  </a>
+
+  
+ </section>
+</ion-content>

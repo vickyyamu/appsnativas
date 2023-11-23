@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>carritos-realizados</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-card>
+  <ion-card-content>
+    <ion-list>
+      <ion-item *ngFor="let item of cartService.carrito">
+        <ion-thumbnail slot="start">
+          <img alt="{{item.producto.nombre}}" src="{{item.producto.imagen}}" />
+        </ion-thumbnail>
+       <ion-label>{{item.producto.nombre}} {{item.cantidad}}</ion-label> 
+       <ion-button [fill]="'clear'" (click)="cartService.eliminarProducto(item.producto.nombre)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</ion-content>

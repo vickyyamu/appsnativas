@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="bottom">
+      Carrito
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="categorias-li" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Carrito</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Resumen de tu pedido</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let item of cartService.carrito">
+          <ion-thumbnail slot="start">
+            <img alt="{{item.producto.nombre}}" src="{{item.producto.imagen}}" />
+          </ion-thumbnail>
+         <ion-label>{{item.producto.nombre}} {{item.cantidad}}</ion-label> 
+         <ion-button [fill]="'clear'" (click)="cartService.eliminarProducto(item.producto.nombre)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+        
+
+  <ion-card>
+    <ion-card-content>
+    <ion-list [inset]="true">
+      <ion-item>
+        <ion-label>Subtotal ${{cartService.totalCarrito}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-select aria-label="Punto de retiro" placeholder="Select">
+          <ion-select-option value="local">En el local</ion-select-option>
+          <ion-select-option value="delivery">Delivery</ion-select-option>
+          <ion-select-option value="take away">Take away</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Total</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+  </ion-card>
+  <!-- <ion-row class="row-botones">
+  <ion-button class="boton-vaciar" color="danger" fill="outline" (click)="cartService.vaciarCarrito()">Vaciar</ion-button>
+  <ion-button id="alerta-boton" color="success" (click)="realizarPedido()">Confirmar pedido</ion-button>
+  <ion-alert trigger="alerta-boton" class="custom-alert" header="Are you sure?" [buttons]="alertButtons"></ion-alert>
+</ion-row> -->
+<ion-row class="row-botones">
+  <ion-button id="boton-vaciar" color="danger" fill="outline">Vaciar</ion-button>
+  <ion-alert trigger="boton-vaciar" header="¿Desea vaciar el carrito?" [buttons]="mensajeVaciar"></ion-alert>
+  <ion-button id="boton-confirmar" color="success">Confirmar pedido</ion-button>
+  <ion-alert trigger="boton-confirmar" header="¿Desea realizar el pedido?" [buttons]="mensajeConfirmar"></ion-alert>
+</ion-row>
+
+    
+    <qrcode (qrCodeURL)="onChangeUrl($event)" [qrdata]="'http://localhost:8100/carritos-realizados/234823758294'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    <a [href]="qrCodeDownloadLink" download="qrcode">Download</a>
+  </ion-content>
