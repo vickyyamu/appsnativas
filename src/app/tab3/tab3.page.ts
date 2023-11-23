@@ -15,14 +15,14 @@ export class Tab3Page {
 
   constructor(
     public cartService:CartService,private cdr: ChangeDetectorRef) {
-      this.qrCodeData= 'http://localhost:8100/carritos-realizados/234823758294'
+      this.qrCodeData= 'https://appsnativas.vercel.app/carritos-realizados/234823758294'
     }
 
     onChangeUrl(url: SafeUrl){
       this.qrCodeDownloadLink=url
     }
     crearMensaje() :string{
-      return 'http://localhost:8100/carritos-realizados/234823758294'
+      return 'https://appsnativas.vercel.app/carritos-realizados/234823758294'
     }
     public mensajeConfirmar = [
       {
