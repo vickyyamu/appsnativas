@@ -76,7 +76,7 @@ export class Tab3Page {
           })
                     
           let cartString: string = JSON.stringify(createdCart);
-          console.log(cartString)
+          console.log(`https://appsnativas.vercel.app/carritos-realizados/${cartString}`)
 
           return `https://appsnativas.vercel.app/carritos-realizados/${cartString}`;
         } catch (error) {
