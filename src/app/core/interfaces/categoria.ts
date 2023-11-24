@@ -4,5 +4,6 @@ export interface Categoria{
     nombre:string
     fotoUrl:string
     productos: Producto[]
+    descripcion:string
    
 }

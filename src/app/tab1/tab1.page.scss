@@ -1,43 +1,40 @@
 section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    background-color: antiquewhite;
+    margin: 12px;
+    margin-bottom: 200px;
+}
 
-}
-.first{
-    justify-self: start;
-    align-self: start;
-    margin-top: -3px;
-}
-.coffee{
-    margin-top: auto;
-    
-}
-img.coffee{
-    margin-top: auto;
-    max-width: 100%;
-    background-color: antiquewhite;
-}
 section a{
-    background-color: rgb(125, 112, 41);
+    position: relative;
     color: white;
     border-radius: 10px;
-    padding:80px 0;
+    padding: 80px 0;
     text-align: center;
-    margin: 8px;
+    margin: 10px;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
+    
     span{
-        display: block;
-        font-weight: bold;
-        width: 100%;
-        padding: 5px;
         color: white;
-        font-size: x-large;
-        filter: brightness(2.5);
-
+        font-weight: bold;
+        font-size: large;
+        background-color: rgb(83, 118, 83);
+        width: 100%;
+        display: block;
+        padding: 5px;
+        position: absolute;
+        bottom: 0;
     }
 
 }
+
+.first {
+    
+    ion-icon {
+      // Estilos para el icono dentro de la clase 'first'
+      color: gold; // Cambia el color según sea necesario
+    }
+  }

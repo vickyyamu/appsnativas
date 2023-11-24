@@ -1,3 +1,125 @@
+.titulo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	  flex-direction: column;
+		font-size:large;
+		max-width: 1200px; 
+		margin: 0 auto; 
+		padding: 0px;
+		box-sizing: border-box;
+  }
+  ion-header {
+	// Customize header styles
+	background-color: #b08c79; // Change the background color to your preferred color
+	color: #fff; // Change the text color to white or any color that fits your design
+  }
+  ion-title {
+	// Customize title styles
+	font-size: 2rem; // Change the font size to your preferred size
+	font-weight: bold; // Add any other font styling you need
+	text-transform: uppercase; // Convert text to uppercase
+	// Add any additional styles you want for the title
+	text-align: center;
+  }
+  button{
+	background-color: transparent;
+  }
+  
+  ion-content {
+	  background-color: #ffecb3; 
+	  color: #333; 
+	}
+	
+	ion-card {
+	  background-color: #fff; 
+	  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+	  border-radius: 20px; 
+	  margin: 20px;
+	  
+	}
+	
+	
+	#btnAleatorio {
+	  background: white; 
+	  color: #fff; 
+	  font-weight: bold;
+	  border-radius: 50px; 
+	  margin: 20px;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+	  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+	  border: 2px solid black; /* Grosor del borde y color */
+		color: black;
+
+	  &:hover {
+		transform: scale(1.1); 
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+		background-color: rgb(238, 202, 211); 
+	  }
+	}
+  
+  ion-card-content{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	   flex-direction: column;
+	}
+  
+  
+	ion-card-header{
+	  display: flex;
+	 
+	  align-items: center;
+	}
+  
+	#nombre{
+	  margin-top: 10px;
+	}
+  
+   
+  .likes img{
+	background-color: transparent;
+	height: 90px;
+	padding: 4px;
+	border-radius: 5px;
+	margin: 5px;
+	text-align: center;
+	margin-left: 100px;
+	width: 80px;
+  }
+  
+  .botonesLike{
+	margin: 10px;
+	width: 100px;
+	height: 40px;
+	
+  	
+}
+  
+.heart{
+	width: 30px;
+	height: 30px;
+}
+
+  
+  .colorVerde{
+	background-color: rgb(238, 202, 211);
+	border-radius: 10px;
+	width: 100px;
+	height: 40px;
+  }
+  
+  
+  
+  .contenedorBotones{
+	display: flex;
+	
+	display: flex;
+  	justify-content: center;  /* Centra horizontalmente */
+  	align-items: center;      /* Centra verticalmente */
+	
+  }
 
 
 :root {
@@ -20,26 +142,4 @@
 div {
     background: var(--ion-color-new);
     color: var(--ion-color-contrast);
-  }
-  ion-header {
-	ion-toolbar {
-	  --background: #886948; /* Fondo del encabezado */
-	  --color: #fff; /* Color del texto del encabezado */
-	}
-  }
-  
-  ion-content {
-	ion-card {
-	  --background: antiquewhite; /* Fondo de las tarjetas */
-	  margin-bottom: 20px; /* Espaciado entre tarjetas */
-	}
-  
-	ion-card-title {
-	  font-size: 1.5em; /* Tamaño del texto del título de la tarjeta */
-	}
-  
-	ion-card-content {
-	  color: rgb(26, 24, 21); /* Color del texto del contenido de la tarjeta */
-	}
-	
   }
