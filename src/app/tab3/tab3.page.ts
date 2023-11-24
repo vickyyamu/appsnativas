@@ -22,9 +22,12 @@ export class Tab3Page {
       this.qrCodeDownloadLink=url
     }
     crearMensaje() :string{
+      
       return 'https://appsnativas.vercel.app/carritos-realizados/234823758294'
+    
     }
-    public mensajeConfirmar = [
+    
+      public mensajeConfirmar = [
       {
         text: 'Cancelar',
         role: 'cancel',
@@ -55,9 +58,35 @@ export class Tab3Page {
           this.cartService.vaciarCarrito()
         },
       },
+      
     ];
+    
 
+    generateQR() {
+      let cartItems: string | null = localStorage.getItem('carrito');
+      
+      if (cartItems && typeof cartItems === 'string') {
+        
+        try {
+          let cartArray: Object[] = JSON.parse(cartItems);
+          
+          let createdCart: Object[] = cartArray.map((item: any)=>{
+            // return {cantidad: item.cantidad, nombre: item.producto.nombre, precio: item.producto.precio}
+            return item.producto.nombre
+          })
+                    
+          let cartString: string = JSON.stringify(createdCart);
+          console.log(cartString)
 
+          return `https://appsnativas.vercel.app/carritos-realizados/${cartString}`;
+        } catch (error) {
+          console.error('Error parsing JSON:', error);
+          return 'Error generating QR code';
+        }
+      } else {
+        return 'No cart data found';
+      }
+    }
   
 
   realizarPedido(){

@@ -1,11 +1,17 @@
-#categorias-li{
-    background-color: antiquewhite;
-}
+
 .row-botones{
     margin: 20px;
-    position: relative;
-    right: -125px;
+    position: center;
     #boton-vaciar{
         margin-right: 16px;
     }
 }
+ion-toolbar {
+    --background:#ffffff; /* Fondo del encabezado */
+    --color: #000000; /* Color del texto del encabezado */
+   
+  }
+  ion-card {
+    --background: #ecf0f1; /* Fondo de las tarjetas */
+    margin-bottom: 10px; /* Espacio entre tarjetas */
+  }

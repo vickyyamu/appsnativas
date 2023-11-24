@@ -1,3 +1,5 @@
+
+
 :root {
 	--ion-color-new: #b18185;
 	--ion-color-new-rgb: 177,129,133;
@@ -18,4 +20,26 @@
 div {
     background: var(--ion-color-new);
     color: var(--ion-color-contrast);
+  }
+  ion-header {
+	ion-toolbar {
+	  --background: #886948; /* Fondo del encabezado */
+	  --color: #fff; /* Color del texto del encabezado */
+	}
+  }
+  
+  ion-content {
+	ion-card {
+	  --background: antiquewhite; /* Fondo de las tarjetas */
+	  margin-bottom: 20px; /* Espaciado entre tarjetas */
+	}
+  
+	ion-card-title {
+	  font-size: 1.5em; /* Tamaño del texto del título de la tarjeta */
+	}
+  
+	ion-card-content {
+	  color: rgb(26, 24, 21); /* Color del texto del contenido de la tarjeta */
+	}
+	
   }

@@ -66,4 +66,5 @@ export class CartService {
        this.totalCarrito = subtotal;
 
     }
+    
 }

@@ -64,6 +64,6 @@
 </ion-row>
 
     
-    <qrcode (qrCodeURL)="onChangeUrl($event)" [qrdata]="'https://appsnativas.vercel.app/carritos-realizados/234823758294'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-    <a [href]="qrCodeDownloadLink" download="qrcode">Download</a>
+<qrcode (qrCodeURL)="onChangeUrl($event)" [qrdata]="generateQR()" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+    <a [href]="qrCodeDownloadLink" download="qrcode">Escanee su QR aquí!</a>
   </ion-content>

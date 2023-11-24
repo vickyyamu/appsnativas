@@ -16,10 +16,13 @@ export class CarritosRealizadosPage {
    public cartService:CartService
     ){
       activatedRoute.params.subscribe(params => {
-        console.log(params)
-        this.buscarProducto(params['id']);
+        let cartArray: Object[] = JSON.parse(params['id']);
+        cartArray.map((item: any)=>{
+          this.buscarProducto(item);
+        })
       })
     }
+    
     cantidad=1;
   producto:Producto = {
     imagen: 'kkkk',
