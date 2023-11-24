@@ -75,7 +75,7 @@ export class Tab3Page {
             return item.producto.nombre
           })
                     
-          let cartString: string = JSON.stringify(createdCart);
+          let cartString: string = encodeURIComponent(JSON.stringify(createdCart));
           console.log(`https://appsnativas.vercel.app/carritos-realizados/${cartString}`)
 
           return `https://appsnativas.vercel.app/carritos-realizados/${cartString}`;
