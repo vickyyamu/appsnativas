@@ -76,9 +76,10 @@ export class Tab3Page {
           })
                     
           let cartString: string = encodeURIComponent(JSON.stringify(createdCart));
-          console.log(`https://appsnativas.vercel.app/carritos-realizados/${cartString}`)
+          let url: String = `https://appsnativas.vercel.app/carritos-realizados/${cartString}`
+          console.log(url)
 
-          return `https://appsnativas.vercel.app/carritos-realizados/${cartString}`;
+          return url;
         } catch (error) {
           console.error('Error parsing JSON:', error);
           return 'Error generating QR code';

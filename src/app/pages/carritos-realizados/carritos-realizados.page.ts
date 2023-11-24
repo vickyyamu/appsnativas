@@ -11,6 +11,8 @@ import { CartService } from 'src/app/core/services/cart.service';
 })
 export class CarritosRealizadosPage {
 
+  productosEncontrados: Producto[] = [];
+
   constructor(
     private activatedRoute: ActivatedRoute, 
    public cartService:CartService
@@ -18,6 +20,8 @@ export class CarritosRealizadosPage {
       activatedRoute.params.subscribe(params => {
         let cartArray: Object[] = JSON.parse(params['id']);
         cartArray.map((item: any)=>{
+          console.log(item);
+          
           this.buscarProducto(item);
         })
       })
@@ -36,8 +40,12 @@ buscarProducto(nombreProductoABuscar:string){
     const categoriaActual = CATEGORIAS[i];
     for (let j = 0; j < categoriaActual.productos.length; j++) {
       const productoActual = categoriaActual.productos[j];
+      console.log('Buscando: ', nombreProductoABuscar);
+      
       if(productoActual.nombre === nombreProductoABuscar){
-         this.producto = productoActual;
+        console.log('encontrado')
+        this.producto = productoActual;
+        this.productosEncontrados.push(productoActual);
       }
      
       

@@ -10,12 +10,12 @@
 <ion-card>
   <ion-card-content>
     <ion-list>
-      <ion-item *ngFor="let item of cartService.carrito">
+      <ion-item *ngFor="let item of productosEncontrados">
         <ion-thumbnail slot="start">
-          <img alt="{{item.producto.nombre}}" src="{{item.producto.imagen}}" />
+          <img alt="{{item.nombre}}" src="{{item.imagen}}" />
         </ion-thumbnail>
-       <ion-label>{{item.producto.nombre}} {{item.cantidad}}</ion-label> 
-       <ion-button [fill]="'clear'" (click)="cartService.eliminarProducto(item.producto.nombre)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+       <ion-label>{{item.nombre}}</ion-label> 
+       <ion-button [fill]="'clear'" (click)="cartService.eliminarProducto(item.nombre)"><ion-icon name="trash-outline"></ion-icon></ion-button>
       </ion-item>
     </ion-list>
   </ion-card-content>
