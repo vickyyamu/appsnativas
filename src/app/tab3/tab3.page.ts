@@ -62,8 +62,8 @@ export class Tab3Page {
     ];
     
 
-    generateQR() {
-      let cartItems: string | null = localStorage.getItem('carrito');
+    generateQR(): string {
+      let cartItems: string| null = localStorage.getItem('carrito');
       
       if (cartItems && typeof cartItems === 'string') {
         
@@ -76,7 +76,7 @@ export class Tab3Page {
           })
                     
           let cartString: string = encodeURIComponent(JSON.stringify(createdCart));
-          let url: String = `https://appsnativas.vercel.app/carritos-realizados/${cartString}`
+          let url: string = `https://appsnativas.vercel.app/carritos-realizados/${cartString}`
           console.log(url)
 
           return url;
