@@ -11,18 +11,27 @@
     }
 }
 
-.qr{
-    margin: 0 auto;
-    
-    position: relative;
-    
-}
-.dw{
 
-   right: -150px;
-   
-    position: relative;
-}
+ .qr{
+        right: -60px;
+        position: relative;
+        
+    }
+    
+    a{
+     color: #000000;
+     text-decoration: none;
+     margin-left: 130px;
+     margin-bottom: 40px;
+    
+    }
+     
+    .dw{
+        right: 20px;
+        position: relative;
+        margin-bottom: 40px;
+    }
+    
 
 .row-botones{
     margin: 20px;

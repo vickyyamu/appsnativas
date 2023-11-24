@@ -39,7 +39,7 @@ export class Tab3Page {
         text: 'Confirmar',
         role: 'confirm',
         handler: () => {
-          this.realizarPedido()
+          
         },
       },
     ];
@@ -90,11 +90,7 @@ export class Tab3Page {
     }
   
 
-  realizarPedido(){
-    window.open(this.crearMensaje(), '_blank');
-    this.qrCodeData= this.crearMensaje();
-    this.cdr.detectChanges();
-  }
+  
 }
 
 
